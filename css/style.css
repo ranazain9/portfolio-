@@ -1,0 +1,570 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', Arial, sans-serif;
+       position: relative;
+       
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+:target {
+  scroll-margin-top: 80px; /* adjust so content doesn’t hide under fixed header */
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0;
+    border-bottom: 2px solid #2fc8d0; /* nice accent divider */
+    width: 100%;
+    justify-content: space-between;
+    background: #1e1e2f; /* transparent background */
+    backdrop-filter: blur(10px);          /* blur effect */
+    padding: 10px 20px;
+    font-size: larger;
+    z-index: 1000;
+}
+
+
+.logo{
+ 
+    width: 50px;
+    height: 50px;
+}
+
+.logo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.my_nav{
+    display: flex;
+}
+
+.my_nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.my_nav li{
+    margin: 0 15px;
+}
+
+.my_nav a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* smooth hover effect */
+}
+
+.my_nav a:hover{
+    color: #00ADB5;
+}
+
+@media (max-width: 768px) {
+    .my_nav ul {
+        flex-direction: column; /* stack vertically */
+        background: #a4a4b6; /* match header background */
+        position: absolute;
+        top: 60px; /* below header */
+        right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: none; /* hide by default */
+    }
+
+    .my_nav ul.active {
+        display: flex; /* show when active */
+    }
+
+    .my_nav li {
+        margin: 10px 0; /* vertical spacing */
+    }
+    
+}
+
+
+
+.banner {
+    position: relative;
+    background-image: url(../banner/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 20px 50px; /* top padding for fixed header */
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.banner_text {
+    max-width: 600px;
+    color: #fff;
+}
+
+.banner h1{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner p{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center items */
+    text-align: center;
+  }
+
+  .about .col-md-6 {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .about img {
+    max-width: 80%;   /* scale image */
+    margin-bottom: 20px;
+  }
+}
+
+
+.about{
+    display: flex;
+    justify-content: space-around; 
+    padding: 50px 20px;
+    color: #fff;
+    background: #1e1e2f;
+}
+.about h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.row{
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+.col-md-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 calc(50% - 20px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.col-md-6:hover{
+    transform: translateY(-10px);
+}
+.col-md-6 img{
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+:target {
+  scroll-margin-top: 50px; /* adjust for your header height */
+}
+
+.projects{
+    padding: 50px 20px;
+    background: #1e1e2f;
+    color: #fff;
+}
+
+.projects h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.project-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item{
+    background: #2e2e3f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 calc(50% - 20px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease;
+   
+}
+    
+.project-card h4{
+    color: #2fc8d0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 400px;
+    height: 250px;           /* unified height */
+    object-fit: cover;     /* keeps full image visible */
+   /* adds dark background behind transparent/white images */
+    border-bottom: 2px solid #2fc8d0; /* nice accent divider */
+ /* breathing space */
+    border-radius: 6px 6px 0 0; /* rounded top corners */
+}
+
+/* For tablets and below */
+@media (max-width: 768px) {
+  .project-card img {
+    width: 100%;   /* full width inside card */
+    height: auto;  /* keep aspect ratio */
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .project-list {
+    flex-direction: column; /* stack cards vertically */
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;  /* smaller than full screen */
+    padding: 15px;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto; /* keep aspect ratio */
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .project-card img {
+    height: 180px; /* controlled height */
+    border-radius: 8px;
+  }
+}
+
+
+.skills {
+    padding: 50px 20px;
+    background: #1e1e2f;
+    color: #fff;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.skill-card {
+    flex: 1 1 calc(33.33% - 20px);
+    background: #2e2e3f;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.skill-card h4 {
+    color: #2fc8d0;
+    margin-bottom: 15px;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-card li {
+    margin: 8px 0;
+}
+
+.skill-card li::before {
+    content: "✓"; /* checkmark */
+    color: #2fc8d0;
+    margin-right: 8px;
+}
+
+
+
+
+.certificates{
+  padding: 50px 20px;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.certificates h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.certificate-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* still allows wrapping on small screens */
+}
+
+.certificate-card {
+ 
+    background: #2e2e3f;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+}
+
+.certificate-card h4 {
+  color: #2fc8d0;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.certificate-card .btn {
+  background: #2fc8d0;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.certificate-card .btn:hover {
+  background: #24a2a9;
+}
+
+
+.hackathons {
+  padding: 50px 20px;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.hackathons h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.hackathon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hackathon-card {
+  flex: 1 1 calc(33.33% - 20px);
+  background: #2e2e3f;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hackathon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.hackathon-card h4 {
+  color: #2fc8d0;
+  margin-bottom: 15px;
+}
+
+.hackathon-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hackathon-card li {
+  margin: 8px 0;
+}
+
+.hackathon-card li::before {
+  content: "🚀"; /* rocket emoji instead of checkmark */
+  color: #2fc8d0;
+  margin-right: 8px;
+}
+
+
+.contact {
+  padding: 50px 20px;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+ }
+
+.contact .form-label {
+  color:#2fc8d0;
+  font-weight: bold;
+}
+
+.contact .form-control {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.contact .btn {
+  
+  background: #2fc8d0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.contact .btn:hover {
+  background: #24a2a9;
+}
+
+
+#form-status {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  display: none; /* hidden by default */
+}
+
+#form-status.success {
+  background-color: #24a2a9;
+  color:  #1e1e2f;
+  border: 1px solid  #24a2a9;
+}
+
+#form-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+.footer {
+  background: #111122;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.footer a {
+  color: #2fc8d0;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.about, 
+.projects, 
+.skills, 
+.certificates, 
+.hackathons, 
+.contact {
+  border-bottom: 3px solid #2fc8d0; /* accent line at bottom */
+  padding-bottom: 60px; /* extra space so content doesn’t touch border */
+}

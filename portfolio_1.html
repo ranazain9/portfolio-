@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="./js/sample.js"></script>
+
+</head>
+<body>
+    
+    
+    <div class="header" >
+        <div class="logo">
+            <img src="./logo/inverted_image-removebg-preview.png" alt="">
+        </div>
+        <div class="my_nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="banner" id="home">
+        <div class="container">
+        <div class="banner-img">
+        </div>
+    <div class="banner_text">
+        <h1 style="color: lch(96.54% 0.01 296.81); font-weight: bold;">Hi <span style="color: #1e1e2f; font-weight: bold; background: lch(96.54% 0.01 296.81); border-radius: 5px;">I’m Rana Zain</span></h1>
+        <p>A passionate Computer Science student specializing in AI, Machine Learning, and Web Development.  
+        I love building smart solutions—from AI-powered systems to modern web apps—that solve real-world problems.</p>
+
+    </div>
+
+    </div>
+</div>
+
+    <div class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./aboutpage.jpg" alt="About Me" style="width: 400px; height: auto; border-radius: 10px;">
+                </div>
+                <div class="col-md-6">
+                    <h3 style="color: #2fc8d0">Who I Am</h3>
+                    <p  style="color: #feffff; ">I’m a passionate Computer Science student at Superior University, currently in my 5th semester. I specialize in C++, Python, and Data Structures, with growing expertise in AI, Data Science, and Frontend Web Development.
+                    I enjoy building real-world projects—from AI-powered assistants and machine learning systems to frontend web applications. My journey is driven by curiosity, problem-solving, and a forward-thinking mindset.
+                    When I’m not coding, I’m usually exploring new technologies, improving my skills, or working on projects that combine AI with real-life impact.</p>
+                    <p>Let’s connect and create something amazing together!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+  <div class="container">
+    <h2>My Projects</h2>
+    <div class="row">
+
+      <!-- Project 1 -->
+      <div class="col-md-4 project-card">
+        <img src="./project_Cards/blood1.png" alt="Project 1">
+        <h4>AI Blood Group Detection</h4>
+        <p>A YOLOv8 + Streamlit based system to detect blood groups from images, generate reports, and support hospital workflows.</p>
+         <a href="https://github.com/ranazain9/Blood-Group-Detection-By-Image-Processing" target="_blank" class="btn btn-primary"
+    style="background:#2fc8d0; color:#0f0f1a; border:none; border-radius:10px;">
+        View Project
+    </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4 project-card">
+        <img  src="./project_Cards/chat.png" alt="Project 2" >
+        <h4>AI Emotion-Aware Chatbot</h4>
+        <p>An AI-powered chatbot that detects user emotions from text/voice and gives personalized responses with song/quote suggestions.</p>
+         <a href="https://github.com/ranazain9/EmotiChat-The-AI-Powered-Emotion-detector" target="_blank" class="btn btn-primary"
+    style="background:#2fc8d0; color:#0f0f1a; border:none; border-radius:10px;">
+        View Project
+    </a>    
+    </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4 project-card">
+        <img src="./project_Cards/ai.jpg" alt="Project 3">
+        <h4>AI-Powered Knowledge Navigator for Research with CrewAI</h4>
+        <p>A Streamlit application that helps hackathon participants find relevant resources and collaborate effectively.</p>
+        <a href="https://github.com/ranazain9/AI-Powered-Knowledge-Navigator-for-Hackathons-Research" target="_blank" class="btn btn-primary"
+    style="background:#2fc8d0; color:#0f0f1a; border:none; border-radius:10px;">
+        View Project
+    </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+   <div class="skills" id="skills">
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="row">
+      <div class="skill-card">
+        <h4>Programming Languages</h4>
+        <ul>
+          <li>C++</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>HTML/CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h4>Frameworks & Libraries</h4>
+        <ul>
+          <li>Django</li>
+          <li>Streamlit</li>
+          <li>Numpy</li>
+          <li>Pandas</li>
+          <li>Matplotlib</li>
+          <li>Bootstrap</li>
+          <li>YOLOv8</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+  <h4>AI / ML Expertise</h4>
+  <ul>
+    <li>Machine Learning (Supervised & Unsupervised)</li>
+    <li>Deep Learning (CNNs)</li>
+    <li>Computer Vision (YOLOv8, OpenCV, Image Processing)</li>
+    <li>NLP (Chatbots, Emotion Detection, Text Processing)</li>
+    <li>Data Analysis & Visualization (Pandas, Matplotlib)</li>
+    <li>Model Deployment (Streamlit, Flask)</li>
+  </ul>
+</div>
+
+      <div class="skill-card">
+        <h4>Tools & Platforms</h4>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Jupyter Notebooks</li>
+          <li>Google Colab</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="certificates">
+  <div class="container">
+    <h2>Certificates</h2>
+    <div class="row">
+      <div class="col-md-4 certificate-card">
+        <h4>Python for Data Science & AI</h4>
+        <p>Coursera · 2025</p>
+        <a href="https://www.credly.com/badges/b8cba1ac-cad4-454a-99cf-84e25988b6b8/linked_in_profile" target="_blank" class="btn btn-primary">View</a>
+      </div>
+      <div class="col-md-4 certificate-card">
+        <h4>Certificate of Completion – Co-Creating with GPT-5</h4>
+        <p>lablab.ai · 2024</p>
+        <a href="https://lablab.ai/u/@Ranazain/cmf2u47gt006c6c0shgwvtyai" target="_blank" class="btn btn-primary">View</a>
+      </div>
+      <div class="col-md-4 certificate-card">
+        <h4>Trae AI IDE: Zero Limits Hackathon</h4>
+        <p>lablab.ai · 2025</p>
+        <a href="https://lablab.ai/u/@Ranazain/cmf2u47gt006c6c0shgwvtyai" target="_blank" class="btn btn-primary">View</a>
+      </div>
+
+      <div class="col-md-4 certificate-card">
+        <h4>Introduction to SQL</h4>
+        <p>Superior University · 2024</p>
+        <a href="https://www.sololearn.com/certificates/CC-TK4CIO4T" target="_blank" class="btn btn-primary">View</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="hackathons" id="hackathons">
+  <div class="container">
+    <h2>Hackathons</h2>
+    <div class="hackathon-cards">
+      
+      <div class="hackathon-card">
+        <h4>Trae AI IDE: Zero Limits Hackathon By lablab.ai</h4>
+        <ul>
+          <li>Anti-ShortVideo-Addiction AI Assistant</li>
+          <li>A digital companion that helps users overcome endless scrolling habits. Instead of blocking apps, it uses AI-driven empathy and smart interactions to gently guide users toward mindful activities and healthier screen-time balance.</li>
+        </ul>
+      </div>
+      
+      <div class="hackathon-card">
+        <h4>Co-Creating with GPT-5 By lablab.ai</h4>
+        <ul>
+          <li>AI-Powered Knowledge Navigator</li>
+          <li>An intelligent system built to accelerate hackathons and research projects. It uses multiple GPT-5-powered agents to understand project goals, curate resources, and provide structured guidance, helping teams move faster from idea to execution.</li>
+          <li><strong>Best Innovation Award · 2025</strong></li>
+        </ul>
+      </div>
+      
+      <div class="hackathon-card">
+        <h4>University HackFest</h4>
+        <ul>
+          <li>Designed a Friend Suggestion System using Linked Lists</li>
+          <li>Enhanced efficiency in social graph navigation</li>
+          <li><strong>Top Performer · 2023</strong></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="contact" id="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="from_email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <!-- Status Message Box -->
+    <div id="form-status"></div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <p>&copy; 2024 Rana Zain. All rights reserved.</p>
+  <p>Follow me on:
+    <a href="https://www.linkedin.com/in/rana-zain-694723254/" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/ranazain9" target="_blank">GitHub</a> ·
+    <a href="https://twitter.com/ranazain9" target="_blank">Twitter</a>
+  </p>
+  
+</div>
+
+</body>
+</html>
